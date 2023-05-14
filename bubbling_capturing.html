@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 100px;
+            background-color: blanchedalmond;
+        }
+        #div{
+            padding: 50px;
+            background-color: darkcyan;
+        }
+        #btn{
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+        <button id="btn">Click Me</button>
+    </div>
+    <script>
+        let btn = document.getElementById("btn");
+        let div = document.getElementById("div");
+
+        //if true as a argument then capturing happens, if false or nothing as a argument then bubbling happens
+
+        btn.addEventListener("click",btnClicked);
+        // btn.addEventListener("click",btnClicked,true);
+        div.addEventListener("click",divClicked);
+        // div.addEventListener("click",divClicked,true);
+        document.body.addEventListener("click",bodyClicked);
+        // document.body.addEventListener("click",bodyClicked,true);
+
+        function btnClicked(event){
+            console.log("Button clicked...");
+            event.stopPropagation(); //this will stop other function to active
+        }
+        function divClicked(){
+            console.log("Div clicked...");
+        }
+        function bodyClicked(){
+            console.log("Body clicked...");
+        }
+    </script>
+</body>
+</html>

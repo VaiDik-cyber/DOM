@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>Product</li>
+        <li>About us</li>
+    </ul>
+    <ul id="menu2">
+        <li>list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+    </ul>
+    <script>
+        //select parent
+        let parent = document.getElementById("menu");
+        let parent2 = document.getElementById("menu2");
+        
+        //select child you want to remove
+        let elm = parent.firstElementChild;
+        //parent.removeChild(parent.firstElementChild);
+        parent.removeChild(elm);
+
+        document.body.removeChild(parent2);
+    </script>
+</body>
+</html>

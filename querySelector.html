@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 class="intro">heading</h2>
+
+    <div id="div1">
+        <h3 class="intro">heading 1</h3>
+        <p class="intro">Vaidik</p>
+
+        <h3>heading 2</h3>
+        <p class="intro">Aastha</p>
+    </div>
+    <script>
+        // let elm = document.querySelector("p.intro"); //only change in first element who satisfy condition.
+
+        // elm.innerHTML = "Person";  
+
+        let elm = document.querySelectorAll("p.intro");
+        for(let i=0;i<elm.length;i++){
+            elm[i].innerHTML = "Person";
+        }
+    
+    </script>
+</body>
+</html>

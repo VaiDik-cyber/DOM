@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" style="border: 2px solid blue">send</button>
+    <script>
+        //select element
+        let btn = document.getElementById("btn");
+
+        //set style through style.cssText 
+        //at a time more than one can be added but if you use "=" then inline css that added to html tag that will be overlap and only new style is unable , but if you use "+=" then inline css remain same and new css will be add.
+        // btn.style.cssText += ("background: yellow; color: blue;");
+
+        //set style through .setAttribute
+        // at a time more than one can be added
+        //this will also overlap inline css
+        // btn.setAttribute("style","background: yellow; color: blue");
+
+        //set style through individule. at a time only one can be added
+        btn.style.background = "yellow";
+        btn.style.color = "blue";
+    </script>
+</body>
+</html>

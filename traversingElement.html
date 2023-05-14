@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li >list 1</li>
+        <li id="intro">list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+    </ul>
+    <ul id="intro1">
+        <li>list a</li>
+        <li>list b</li>
+        <li>list c</li>
+        <li>list d</li>
+    </ul>
+    <script>
+        let elm = document.getElementById("intro");
+        // let prt = elm.parentElement; //this will select parent element.
+        // console.log(prt);
+
+        // let sib = elm.previousElementSibling; //this will select previous sibling element
+        // console.log(sib.innerHTML);
+
+        // let sib = elm.nextElementSibling; //this will select next sibling element
+        // console.log(sib.innerHTML);
+
+        let elm2 = document.getElementById("intro1");
+
+        // let chl = elm2.children;  //this will select all children
+        // for(let i=0;i<chl.length;i++){
+        //     console.log(chl[i]);
+        // }
+
+        // let chl = elm2.firstElementChild; //this will select first element child
+        // console.log(chl.innerHTML);
+
+        let chl = elm2.lastElementChild; //this will select last element child
+        console.log(chl.innerHTML);
+    </script>
+</body>
+</html>

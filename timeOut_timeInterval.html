@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Clear Timeout</button>
+    <button id="btn1">Clear TimeInterval</button>
+    <script>
+        //select element
+        let btn = document.getElementById("btn");
+        let btn1 = document.getElementById("btn1");
+        // set time to execute function
+        // window.setTimeout(timeOut,5000);
+
+        //set timeout for function
+        let timeOutId = setTimeout(timeOut,5000); 
+        function timeOut(){
+            alert("Loading Data...");
+        }
+        //add event to button that will clear or close timeout function
+        btn.addEventListener("click",function(){
+            clearTimeout(timeOutId);
+            console.log("TimeOut is clear...");
+        });
+
+        //set time Interval for function
+        let timeIntervalId = setInterval(timeInterval,2000);
+        function timeInterval(){
+            console.log("Function is running in timeinterval..");
+        }
+        //add event to button that will close or clear time interval function
+        btn1.addEventListener("click",function(){
+            clearInterval(timeIntervalId);
+            console.log("TimeInterval is clear...");
+        });
+    </script>
+</body>
+</html>

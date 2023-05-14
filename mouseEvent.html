@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="box" onclick="fun1()"></div> -->
+    <!-- <div id="box" oncontextmenu="fun2()"></div> -->
+    <!-- <div id="box" ondblclick="fun3()"></div> -->
+    <!-- <div id="box" onmousedown="fun4()"></div> -->
+    <!-- <div id="box" onmouseover="fun6()"></div> -->
+    <div id="box" onmouseout="fun7()"></div>
+
+    <script>
+        function fun1(){
+            alert("Clicked!!");
+        }
+        function fun2(){
+            alert(" right Clicked!!");
+        }
+        function fun3(){
+            alert(" Double Clicked!!");
+        }
+        function fun4(){
+            alert(" active when mouse down");
+        }
+        function fun5(){
+            alert(" active when mouse up");
+        }
+        function fun6(){
+            alert(" active when mouse over");
+        }
+        function fun7(){
+            alert(" active when mouse out");
+        }
+    </script>
+</body>
+</html>

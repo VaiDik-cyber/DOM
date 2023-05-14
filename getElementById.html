@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li id="first">list 1</li>
+        <li id="second">list 2</li>
+        <li>list 3</li>
+    </ul>
+    <script>
+
+        let elm = document.getElementById("second");
+        let elm2 = document.getElementById("first");
+        console.log(elm);                //it will give whole html element
+        console.log(elm2.innerHTML);     //get element
+        console.log(elm.innerHTML);      //innerHTML will grab inner html data
+
+        elm.innerHTML = "<h3> Good morning buddy </h3>";  //set element
+        elm2.innerHTML = "Hello";
+        console.log(elm.innerHTML);
+    </script>
+</body>
+</html>

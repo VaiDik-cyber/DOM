@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            background-color: yellow;
+            color: white;
+            }
+    </style>
+</head>
+<body>
+    <button id="btn" style="color:blue">
+        send
+    </button>
+    <script>
+        //select element
+        let btn = document.getElementById("btn");
+
+        //store css inside variable
+        let css = getComputedStyle(btn); //get css 
+
+        //print applied css
+        console.log(css);
+        //print particuler css
+        console.log(css.color);
+    </script>
+</body>
+</html>

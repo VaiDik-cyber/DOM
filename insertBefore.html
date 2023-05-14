@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="intro">
+        <li>list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+    </ul>
+    <script>
+        // select parent element
+        let parent = document.getElementById("intro");
+
+        // create element we want to add
+        let item = document.createElement("li");
+
+        // add text content in item
+        item.textContent = "new list 5";
+
+        // select position from firstelementchild 
+        let pos = parent.firstElementChild.nextElementSibling.nextElementSibling;      //this will select 3rd position
+        // let pos = parent.firstElementChild; //this will select 1st position
+
+
+        //to add element at selected position
+        parent.insertBefore(item,pos);
+
+        let prt = document.body; //select parent
+        let elm = document.createElement("h1"); //create element
+        elm.textContent = "This is list";   //set text
+        let list = document.getElementById("intro");  //get element for position
+        prt.insertBefore(elm,list);  //insert element
+    </script>
+</body>
+</html>

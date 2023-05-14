@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>heading</h2>
+    <h3>heading</h3>
+
+    <div id="div1">
+        <h3>heading 1</h3>
+        <p>Vaidik</p>
+
+        <h3>heading 2</h3>
+        <p>Aastha</p>
+
+    </div>
+    <script>
+
+        //by tag we change h2's html
+        let h2 = document.getElementsByTagName("h2");  //get elements
+        for(let i=0;i<h2.length;i++){
+            h2[i].innerHTML = "Greetings";             //set elements
+        }
+        let h_3 = document.getElementsByTagName("h3");
+        for(let i=0;i<h_3.length;i++){
+            h_3[i].innerHTML = "Hellooo";
+        }
+
+        //by id we change div1's all h3 elements.
+        let div1 = document.getElementById("div1");    //get elements
+        let h3 = div1.getElementsByTagName("h3");      // get elements
+        for(let i=0;i<h3.length;i++){   
+            h3[i].innerHTML = "Good Morning";          //set elements
+        }
+    </script>
+</body>
+</html>

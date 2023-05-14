@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1"> Google</button>
+    <button id="btn2">Yahoo</button>
+    <button id="btn3">close</button>
+    <!-- if you find any global variable that defined with "var" or function, that will also access by window keyword. window is bydefault there so if you not mention it then it will not give you error. -->
+    <script>
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        let btn3 = document.getElementById("btn3");
+
+        let url = "https://www.google.com";
+        // let name = 'google';
+        let features = "height=300,width=300";
+        let win;
+
+        //this will open new tab 
+        btn1.addEventListener("click",function(){
+            win = window.open(url,'google',features);
+        })
+
+        btn2.addEventListener("click",function(){
+            window.open("https://www.yahoo.com",'google',features);
+        })
+
+        //this will close tab
+        btn3.addEventListener("click",function(){
+            win.close();
+            
+        })
+        // var x = "hello";
+        // console.log(x);
+        // console.log(window.x);
+
+        // function xyz(){
+        //     console.log("Good Morning");
+        // }
+        // xyz();
+        // window.xyz();
+
+        // alert("hiiii...");
+        // window.alert("hiiii...");
+
+        // console.log(window.innerHeight); //height of body
+        // console.log(window.innerWidth);  //width of body
+
+        // console.log(window.outerHeight); //height of whole window
+        // console.log(window.outerHeight); //width of whole window
+    </script>
+</body>
+</html>

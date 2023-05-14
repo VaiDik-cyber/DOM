@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" onclick="fun()">redirect to google</button>
+    <button id="btn1" onclick="fun1()">reload</button>
+    <script>
+
+        console.log(location.href);//for link address
+        console.log(location.pathname); //for path 
+        console.log(location.protocol); //for protocol
+
+        
+        function fun(){
+            // location.href = "https://www.google.com";
+            // window.location = "https://www.google.com";
+            location.assign("https://www.google.com");
+            // location.replace("https://www.google.com");
+            
+        }
+        function fun1(){
+            location.reload();
+        }
+    </script>
+</body>
+</html>

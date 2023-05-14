@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="cl pi">list 1</li>
+        <li class="cl">list 2</li>
+        <li class="cl pi">list 3</li>
+    </ul>
+    <script>
+        let elm2 = document.getElementsByClassName("cl");
+        for(let i=0;i<elm2.length;i++){
+            elm2[i].innerHTML = " <h3> buddy </h3>";
+        }
+        console.log(elm2);
+
+        let elm = document.getElementsByClassName("cl pi"); //this will store all elements with "cl pi" classes in array format,so for accessing elements of array we need for loop.
+
+        for(let i=0;i<elm.length; i++){     
+            elm[i].innerHTML = "<p> hello </p> ";
+        }
+        console.log(elm);
+        //remember one thing that if i use "cl pi" class first and "cl" class second then all three will be print buddy bcz "cl" class is common for all, so it will change all elements.
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color{
+            background-color: yellowgreen;
+            color: red;
+        }
+        .dim{
+            border: 2px solid green;
+            padding: 50px;
+        }
+        .text-style{
+            text-decoration:underline;
+        }
+        .text-style2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="color">
+        <p>this is paragraph</p>
+    </div>
+    <script>
+        //select element
+        let box = document.getElementById("box");
+
+        //add class
+        //box.className = "dim"; //this will replace color class
+        box.className += " dim"; //this will add dim class without replace
+        // use space when you add class otherwise it'll consider "colordim" not "color dim"
+
+        //print classes
+        console.log(box.className);
+
+        //print classes
+        console.log(box.classList);
+
+        //add class thorugh classList.add
+        box.classList.add("text-style");
+
+        //remove class through classList.remove
+        // box.classList.remove("text-style");
+
+        //replace one class by another through classList.replace
+        box.classList.replace("text-style","text-style2");
+
+        //check class is present or not
+        console.log(box.classList.contains("text-style"));
+        
+        //toggle add class if it's not present and remove if it's present
+        box.classList.toggle("text-style");
+
+        //gives height and width with border and padding
+        // let height= box.offsetHeight;
+        // let width = box.offsetWidth;
+
+        //gives height and width with padding only
+        let height = box.clientHeight;
+        let width = box.clientWidth;
+
+        console.log(height);
+        console.log(width);
+    </script>
+</body>
+</html>
