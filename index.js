@@ -1,22 +1,22 @@
-function outerfunction() {
-  
-    console.log(a);
+function create3rdPost(callback) {
+  setTimeout(() => {
+      console.log('Post Three');
+      if (callback) {
+          callback();
+      }
+  }, 1000);
+}
 
-    var a = 10;
+function create4thPost() {
+  setTimeout(() => {
+      console.log('Post Four');
+  }, 2000);
+}
 
-    innerfunction();
+function create5thPost() {
+  setTimeout(() => {
+      console.log('Post Five');
+  }, 3000);
+}
 
-    function innerfunction() {
-      console.log(a);
-
-    //   console.log(window.a);
-
-      console.log(this.a);
-    }
-  }
-
-  var a = 7;
-
-  var b = 3;
-
-  outerfunction();
+create5thPost(create4thPost(create3rdPost()))
